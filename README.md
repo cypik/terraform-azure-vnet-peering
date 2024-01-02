@@ -25,7 +25,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 
 ```hcl
 module "vnet_peering" {
-  source                        = "git::https://github.com/opz0/terraform-azure-vnet-peering.git?ref=v1.0.0"
+  source                        = "git::https://github.com/cypik/terraform-azure-vnet-peering.git?ref=v1.0.0"
   enabled_diff_subs_peering     = true
   resource_group_1_name         = module.resource_group.resource_group_name
   diff_subs_resource_group_name = data.azurerm_resource_group.resource_group_1.name
@@ -41,7 +41,7 @@ module "vnet_peering" {
 
 ```hcl
 module "vnet_peering" {
-  source                = "git::https://github.com/opz0/terraform-azure-vnet-peering.git?ref=v1.0.0"
+  source                = "git::https://github.com/cypik/terraform-azure-vnet-peering.git?ref=v1.0.0"
   enabled_peering       = true
   resource_group_1_name = module.resource_group_1.resource_group_name
   resource_group_2_name = module.resource_group_2.resource_group_name
@@ -68,10 +68,10 @@ This module provides the following outputs:
 - 'id': The ID of the Virtual Network Peering.
 
 # Examples
-For detailed examples on how to use this module, please refer to the 'examples' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[examples](https://github.com/cypik/terraform-azure-vnet-peering/blob/master/_example)' directory within this repository.
 
 # License
-This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/opz0/terraform-azure-vnet-peering/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/cypik/terraform-azure-vnet-peering/blob/master/LICENSE) file for more details.
 
 # Author
 Your Name

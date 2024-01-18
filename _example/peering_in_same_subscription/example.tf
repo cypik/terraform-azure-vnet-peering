@@ -3,7 +3,8 @@ provider "azurerm" {
 }
 
 module "resource_group_1" {
-  source      = "git::https://github.com/cypik/terraform-azure-resource-group.git?ref=v1.0.0"
+  source      = "cypik/resource-group/azure"
+  version     = "1.0.1"
   name        = "app"
   environment = "test"
   location    = "West Europe"
@@ -11,8 +12,9 @@ module "resource_group_1" {
 
 
 module "resource_group_2" {
-  source      = "git::https://github.com/cypik/terraform-azure-resource-group.git?ref=v1.0.0"
-  name        = "app"
+  source      = "cypik/resource-group/azure"
+  version     = "1.0.1"
+  name        = "app2"
   environment = "test"
   location    = "East US"
 }
@@ -21,7 +23,8 @@ module "resource_group_2" {
 
 #Vnet
 module "vnet" {
-  source              = "git::https://github.com/cypik/terraform-azure-vnet.git?ref=v1.0.0"
+  source              = "cypik/vnet/azure"
+  version             = "1.0.1"
   name                = "app"
   environment         = "test"
   resource_group_name = module.resource_group_1.resource_group_name
@@ -31,8 +34,9 @@ module "vnet" {
 
 #Vnet
 module "vnet_remote" {
-  source              = "git::https://github.com/cypik/terraform-azure-vnet.git?ref=v1.0.0"
-  name                = "app"
+  source              = "cypik/vnet/azure"
+  version             = "1.0.1"
+  name                = "app2"
   environment         = "test"
   resource_group_name = module.resource_group_2.resource_group_name
   location            = module.resource_group_2.resource_group_location

@@ -4,7 +4,7 @@ provider "azurerm" {
 
 module "resource_group_1" {
   source      = "cypik/resource-group/azure"
-  version     = "1.0.1"
+  version     = "1.0.3"
   name        = "app"
   environment = "test"
   location    = "West Europe"
@@ -13,7 +13,7 @@ module "resource_group_1" {
 
 module "resource_group_2" {
   source      = "cypik/resource-group/azure"
-  version     = "1.0.1"
+  version     = "1.0.3"
   name        = "app2"
   environment = "test"
   location    = "East US"
@@ -24,7 +24,7 @@ module "resource_group_2" {
 #Vnet
 module "vnet" {
   source              = "cypik/vnet/azure"
-  version             = "1.0.1"
+  version             = "1.0.3"
   name                = "app"
   environment         = "test"
   resource_group_name = module.resource_group_1.resource_group_name
@@ -35,7 +35,7 @@ module "vnet" {
 #Vnet
 module "vnet_remote" {
   source              = "cypik/vnet/azure"
-  version             = "1.0.1"
+  version             = "1.0.3"
   name                = "app2"
   environment         = "test"
   resource_group_name = module.resource_group_2.resource_group_name

@@ -1,4 +1,3 @@
-
 resource "azurerm_virtual_network_peering" "peering" {
   count                        = var.enabled_peering || var.enabled_diff_subs_peering ? 1 : 0
   name                         = var.enabled_diff_subs_peering == false ? format("%s-peering-%s", var.vnet_1_name, var.vnet_2_name) : format("%s-peering-%s", var.vnet_1_name, var.vnet_diff_subs_name)

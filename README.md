@@ -25,7 +25,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 ```hcl
 module "vnet_peering" {
   source                        = "cypik/vnet-peering/azure"
-  version                       = "1.0.1"
+  version                       = "1.0.2"
   enabled_diff_subs_peering     = true
   resource_group_1_name         = module.resource_group.resource_group_name
   diff_subs_resource_group_name = data.azurerm_resource_group.resource_group_1.name
@@ -42,7 +42,7 @@ module "vnet_peering" {
 ```hcl
 module "vnet_peering" {
   source                = "cypik/vnet-peering/azure"
-  version               = "1.0.1"
+  version               = "1.0.2"
   enabled_peering       = true
   resource_group_1_name = module.resource_group_1.resource_group_name
   resource_group_2_name = module.resource_group_2.resource_group_name
@@ -70,15 +70,15 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >=3.87.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.15.8 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 5.4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >=3.87.0 |
-| <a name="provider_azurerm.peer"></a> [azurerm.peer](#provider\_azurerm.peer) | >=3.87.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 5.4.0 |
+| <a name="provider_azurerm.peer"></a> [azurerm.peer](#provider\_azurerm.peer) | >= 5.4.0 |
 
 ## Modules
 
